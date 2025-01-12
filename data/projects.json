@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Portfolio Website",
+    "description": "A Vue.js portfolio website hosted on GitHub Pages.",
+    "link": "https://github.com/mostafaessa/portfolio",
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "title": "E-commerce API",
+    "description": "A Laravel-based backend API for e-commerce apps.",
+    "link": "https://github.com/mostafaessa/ecommerce-api",
+    "image": "https://via.placeholder.com/150"
+  }
+]
