@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Mostafa Essa",
+    "title": "Senior Backend Developer",
+    "description": "I build scalable APIs and web applications using Laravel and Node.js. Passionate about creating robust, high-performance backend systems that power modern web and mobile applications.",
+    "viewWork": "View My Work",
+    "getInTouch": "Get In Touch",
+    "downloadCV": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Get to know me better",
+    "description1": "I'm a passionate backend developer with over 2 years of experience building scalable web applications and APIs. I specialize in PHP/Laravel and Node.js development, with expertise in database optimization, microservices architecture, and RESTful API design.",
+    "description2": "My journey in software development started with a curiosity about how web applications work behind the scenes. Today, I've successfully delivered 7+ production applications serving thousands of users, with a focus on performance, security, and maintainable code.",
+    "highlights": {
+      "fast": "Fast & Scalable APIs",
+      "secure": "Secure & Reliable",
+      "clean": "Clean Code"
+    }
+  },
+  "experience": {
+    "title": "Work Experience",
+    "subtitle": "My professional journey",
+    "gravity": {
+      "title": "Senior Backend Developer (PHP - Laravel)",
+      "company": "Gravity",
+      "period": "August 2023 - Present",
+      "achievements": [
+        "Led development of 7 production applications serving 50,000+ users",
+        "Reduced API response time by 40% through database query optimization",
+        "Implemented robust authentication systems with JWT tokens",
+        "Mentored 2 junior developers in Laravel best practices"
+      ]
+    },
+    "incode": {
+      "title": "Backend Developer",
+      "company": "InCode Hub",
+      "period": "February 2023 - April 2023",
+      "achievements": [
+        "Built high-performance APIs with 99.9% uptime",
+        "Created comprehensive API documentation reducing integration time by 50%",
+        "Implemented scalable architecture supporting 10,000+ concurrent users"
+      ]
+    },
+    "yallaweb": {
+      "title": "Junior Backend Developer",
+      "company": "YallaWeb",
+      "period": "February 2022 - June 2022",
+      "achievements": [
+        "Enhanced control panel functionality improving admin efficiency by 30%",
+        "Fixed critical bugs reducing system downtime by 80%",
+        "Improved CMS features resulting in 25% faster content management"
+      ]
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Some of my recent work",
+    "ecommerceApi": {
+      "title": "E-commerce API",
+      "description": "Comprehensive RESTful API with JWT authentication, role-based access control, and optimized database queries.",
+      "code": "Code",
+      "demo": "Demo"
+    },
+    "ecommerceApp": {
+      "title": "E-commerce Application",
+      "description": "Full-stack e-commerce solution with PayPal integration, admin control panel, and real-time inventory tracking.",
+      "code": "Code",
+      "demo": "Demo"
+    },
+    "swimmingPool": {
+      "title": "Swimming Pool Management",
+      "description": "Comprehensive management system for coaches, employees, and training with role-based access control.",
+      "code": "Code",
+      "demo": "Demo"
+    },
+    "imageApi": {
+      "title": "Image Processing API",
+      "description": "Placeholder image API with size customization, caching system, and comprehensive error handling.",
+      "code": "Code",
+      "demo": "Demo"
+    }
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "subtitle": "What I work with",
+    "categories": {
+      "backend": "Backend Development",
+      "databases": "Databases",
+      "frontend": "Frontend Integration",
+      "devops": "DevOps & Tools",
+      "testing": "Testing & Quality",
+      "architecture": "Architecture"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's work together",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "name": "Your Name",
+    "subject": "Subject",
+    "message": "Your Message",
+    "sendMessage": "Send Message",
+    "messageSent": "Message sent successfully! I'll get back to you soon.",
+    "fillFields": "Please fill in all fields",
+    "validEmail": "Please enter a valid email address"
+  },
+  "footer": {
+    "copyright": "© 2024 Mostafa Essa Ahmed. All rights reserved.",
+    "builtWith": "Built with ❤️ using Vue.js & Vite"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "en": "English",
+    "ar": "العربية"
+  }
+} 
