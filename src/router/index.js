@@ -1,39 +1,39 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '@/views/Home.vue'
-import TestPage from '@/views/TestPage.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import Home from "@/views/Home.vue";
+import TestPage from "@/views/TestPage.vue";
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/portfolio/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/test',
-    name: 'Test',
-    component: TestPage
+    path: "/test",
+    name: "Test",
+    component: TestPage,
   },
   {
-    path: '/:pathMatch(.*)*',
-    redirect: '/'
-  }
-]
+    path: "/:pathMatch(.*)*",
+    redirect: "/",
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
-      return savedPosition
+      return savedPosition;
     } else if (to.hash) {
       return {
         el: to.hash,
-        behavior: 'smooth'
-      }
+        behavior: "smooth",
+      };
     } else {
-      return { top: 0 }
+      return { top: 0 };
     }
-  }
-})
+  },
+});
 
-export default router 
+export default router;
