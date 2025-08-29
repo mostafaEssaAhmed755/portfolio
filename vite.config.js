@@ -10,10 +10,10 @@ export default defineConfig({
       "@": resolve(__dirname, "src"),
     },
   },
-  server: {
-    port: 5174,
-    host: true,
-  },
+  // server: {
+  //   port: 5174,
+  //   host: true,
+  // },
   build: {
     outDir: "dist",
     assetsDir: "assets",
@@ -27,5 +27,5 @@ export default defineConfig({
       },
     },
   },
-  base: "/portfolio/",
+  // base: "/portfolio/",
 });
