@@ -2,6 +2,9 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { resolve } from "path";
 
+// Detect if we're building for production
+const isProduction = process.env.NODE_ENV === "production";
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
@@ -10,10 +13,6 @@ export default defineConfig({
       "@": resolve(__dirname, "src"),
     },
   },
-  // server: {
-  //   port: 5174,
-  //   host: true,
-  // },
   build: {
     outDir: "dist",
     assetsDir: "assets",
@@ -27,5 +26,5 @@ export default defineConfig({
       },
     },
   },
-  // base: "/portfolio/",
+  base: isProduction ? "/portfolio/" : "/", // 👈 base only for build
 });
