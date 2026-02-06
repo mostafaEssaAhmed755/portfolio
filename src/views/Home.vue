@@ -79,7 +79,7 @@
               >{{ t.hero.cta.projects }}</a
             >
             <a
-              href="/Mostafa-Essa-Resume.pdf"
+              href="./Mostafa-Essa-Resume.pdf"
               download="Mostafa_Essa_Resume.pdf"
               class="btn-secondary inline-flex items-center gap-2"
             >
@@ -185,7 +185,7 @@
             <!--  section for Download CV -->
             <div class="mt-8">
               <a
-                href="/Mostafa-Essa-Resume.pdf"
+                href="./Mostafa-Essa-Resume.pdf"
                 download="Mostafa_Essa_Resume.pdf"
                 class="inline-flex items-center gap-3 px-6 py-3 bg-accent text-gray-900 rounded-xl font-semibold hover:shadow-lg hover:shadow-accent/50 transform hover:-translate-y-0.5 transition-all duration-300 group"
               >
@@ -650,7 +650,7 @@
 
               <!-- Download CV Card -->
               <a
-                href="/Mostafa-Essa-Resume.pdf"
+                href="./Mostafa-Essa-Resume.pdf"
                 download="Mostafa_Essa_Resume.pdf"
                 class="card card-hover flex items-center gap-4 group cursor-pointer"
               >
@@ -846,7 +846,7 @@
     <transition name="fade">
       <a
         v-if="showDownloadButton"
-        href="/Mostafa-Essa-Resume.pdf"
+        href="./Mostafa-Essa-Resume.pdf"
         download="Mostafa_Essa_Resume.pdf"
         class="fixed bottom-24 right-8 w-14 h-14 rounded-full bg-gradient-to-r from-accent to-primary-500 text-gray-900 flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all z-40 group"
         title="Download Resume"
