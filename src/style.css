@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300;
+        font-family: 'Inter', sans-serif;
+    }
+
+    [dir="rtl"] {
+        direction: rtl;
+    }
+
+    [dir="ltr"] {
+        direction: ltr;
+    }
+}
+
+@layer components {
+
+    /* Glassmorphism effect */
+    .glass {
+        @apply bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border border-gray-200/50 dark:border-gray-700/50;
+    }
+
+    /* Gradient text */
+    .gradient-text {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-accent via-primary-500 to-accent;
+        background-size: 200% auto;
+        animation: gradient 3s ease infinite;
+    }
+
+    /* Glow effect */
+    .glow {
+        box-shadow: 0 0 30px rgba(200, 255, 0, 0.3);
+    }
+
+    .glow-hover {
+        transition: box-shadow 0.3s ease;
+    }
+
+    .glow-hover:hover {
+        box-shadow: 0 0 40px rgba(200, 255, 0, 0.5);
+    }
+
+    /* Button styles */
+    .btn-primary {
+        @apply px-8 py-4 bg-accent text-gray-900 rounded-full font-semibold hover:shadow-lg hover:shadow-accent/50 transform hover:-translate-y-0.5 transition-all duration-300;
+    }
+
+    .btn-secondary {
+        @apply px-8 py-4 glass rounded-full font-semibold hover:bg-white/90 dark:hover:bg-gray-800/90 transform hover:-translate-y-0.5 transition-all duration-300;
+    }
+
+    /* Card styles */
+    .card {
+        @apply glass rounded-2xl p-6 transition-all duration-300;
+    }
+
+    .card-hover {
+        @apply hover:shadow-xl hover:-translate-y-1 hover:border-accent/50;
+    }
+
+    /* Animated background grid */
+    .grid-bg {
+        background-image:
+            linear-gradient(rgba(200, 255, 0, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(200, 255, 0, 0.05) 1px, transparent 1px);
+        background-size: 50px 50px;
+        animation: grid-flow 20s linear infinite;
+    }
+
+    @keyframes grid-flow {
+        0% {
+            background-position: 0 0;
+        }
+
+        100% {
+            background-position: 50px 50px;
+        }
+    }
+
+    /* Reveal animation */
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent;
+}
+
+/* Selection */
+::selection {
+    @apply bg-accent text-gray-900;
+}
