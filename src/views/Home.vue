@@ -78,6 +78,26 @@
               class="btn-secondary"
               >{{ t.hero.cta.projects }}</a
             >
+            <a
+              href="/Mostafa-Essa-Resume.pdf"
+              download="Mostafa_Essa_Resume.pdf"
+              class="btn-secondary inline-flex items-center gap-2"
+            >
+              {{ t.hero.cta.cv }}
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -160,6 +180,30 @@
                   {{ t.about.stats[key] }}
                 </div>
               </div>
+            </div>
+
+            <!--  section for Download CV -->
+            <div class="mt-8">
+              <a
+                href="/Mostafa-Essa-Resume.pdf"
+                download="Mostafa_Essa_Resume.pdf"
+                class="inline-flex items-center gap-3 px-6 py-3 bg-accent text-gray-900 rounded-xl font-semibold hover:shadow-lg hover:shadow-accent/50 transform hover:-translate-y-0.5 transition-all duration-300 group"
+              >
+                <svg
+                  class="w-5 h-5 group-hover:animate-bounce"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+                <span>Download Resume (PDF)</span>
+              </a>
             </div>
           </div>
         </div>
@@ -604,6 +648,41 @@
                 </div>
               </div>
 
+              <!-- Download CV Card -->
+              <a
+                href="/Mostafa-Essa-Resume.pdf"
+                download="Mostafa_Essa_Resume.pdf"
+                class="card card-hover flex items-center gap-4 group cursor-pointer"
+              >
+                <div
+                  class="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors"
+                >
+                  <svg
+                    class="w-6 h-6 text-accent"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">
+                    Resume
+                  </div>
+                  <div
+                    class="font-semibold group-hover:text-accent transition-colors"
+                  >
+                    Download PDF
+                  </div>
+                </div>
+              </a>
+
               <!-- Social Links -->
               <div class="flex gap-4 pt-4">
                 <a
@@ -762,11 +841,37 @@
         </div>
       </div>
     </transition>
+
+    <!-- Floating Download CV Button -->
+    <transition name="fade">
+      <a
+        v-if="showDownloadButton"
+        href="/Mostafa-Essa-Resume.pdf"
+        download="Mostafa_Essa_Resume.pdf"
+        class="fixed bottom-24 right-8 w-14 h-14 rounded-full bg-gradient-to-r from-accent to-primary-500 text-gray-900 flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all z-40 group"
+        title="Download Resume"
+        aria-label="Download Resume"
+      >
+        <svg
+          class="w-6 h-6 group-hover:animate-bounce"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+          />
+        </svg>
+      </a>
+    </transition>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import { useLanguage } from "../composables/useLanguage";
 import { useScrollAnimation } from "../composables/useScrollAnimation";
 import emailjs from "@emailjs/browser";
@@ -872,7 +977,20 @@ const getParticleStyle = (index) => {
   };
 };
 
+const showDownloadButton = ref(false);
+
 onMounted(() => {
+  const handleScroll = () => {
+    showDownloadButton.value = window.scrollY > 500;
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  // Cleanup
+  onUnmounted(() => {
+    window.removeEventListener("scroll", handleScroll);
+  });
+
   setTimeout(() => {
     const event = new Event("scroll");
     window.dispatchEvent(event);
@@ -927,5 +1045,50 @@ onMounted(() => {
 .modal-leave-to .glass {
   transform: scale(0.9);
   opacity: 0;
+}
+
+/* Download button animation */
+.btn-download {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-download::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-download:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Floating button pulse */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+
+.floating-download::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  animation: pulse-ring 1.5s infinite;
 }
 </style>
