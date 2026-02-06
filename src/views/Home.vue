@@ -36,7 +36,7 @@
             style="animation-delay: 0.1s"
           >
             <span class="block mb-2">{{ t.hero.title }}</span>
-            <span class="gradient-text">Mostafa Essa Ahmed</span>
+            <span class="gradient-text">Mostafa Essa</span>
           </h1>
 
           <!-- Subtitle -->
