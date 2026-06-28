@@ -15,7 +15,7 @@ export const translations = {
       badge: "Available for Remote Work",
       title: "Backend Developer",
       subtitle:
-        "Building scalable SaaS platforms, APIs, and high-performance backend systems using Laravel and Node.js",
+        "Backend Engineer specializing in building scalable SaaS platforms, multi-tenant systems, and production-grade APIs using Laravel.\n\nI design and build systems that handle real users, real traffic, and real business operations.",
       cta: {
         hire: "Hire Me",
         projects: "View Projects",
