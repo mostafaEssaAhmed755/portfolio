@@ -106,7 +106,7 @@ Edit `src/data/translations.js` to update:
 - Skills and technologies
 - Work experience
 - Projects
-- Services
+- Services (currently disabled)
 - Contact details
 
 ### Modify Theme Colors

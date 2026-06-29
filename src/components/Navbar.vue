@@ -72,7 +72,7 @@ const navItems = [
   { id: 'skills', href: '#skills' },
   { id: 'experience', href: '#experience' },
   { id: 'projects', href: '#projects' },
-  { id: 'services', href: '#services' },
+  // { id: 'services', href: '#services' },  // Commented out - Services section disabled
   { id: 'contact', href: '#contact' }
 ]
 

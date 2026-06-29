@@ -6,7 +6,7 @@ export const translations = {
       skills: "Skills",
       experience: "Experience",
       projects: "Projects",
-      services: "Services",
+      // services: "Services",  // Commented out - Services section disabled
       contact: "Contact",
     },
 
@@ -14,8 +14,8 @@ export const translations = {
     hero: {
       badge: "Available for Remote Work",
       title: "Backend Developer",
-      subtitle:
-        "Backend Engineer specializing in building scalable SaaS platforms, multi-tenant systems, and production-grade APIs using Laravel.\n\nI design and build systems that handle real users, real traffic, and real business operations.",
+      subtitle1: "Backend Engineer specializing in building scalable SaaS platforms, multi-tenant systems, and production-grade APIs using Laravel.",
+      subtitle2: "I design and build systems that handle real users, real traffic, and real business operations.",
       cta: {
         hire: "Hire Me",
         projects: "View Projects",
@@ -28,9 +28,10 @@ export const translations = {
       label: "About Me",
       title: "Crafting robust backends since 2022",
       description: [
-        "I'm a Laravel Backend Developer based in Egypt, working remotely with clients across Saudi Arabia and beyond. I specialize in building production-grade SaaS platforms, e-commerce systems, and multi-tenant applications that scale.",
-        "My work focuses on turning complex business requirements into clean, maintainable code. From architecting RESTful APIs and payment integrations to building admin dashboards and notification systems, I deliver solutions that solve real problems.",
-        "With experience across transportation, education, nutrition, finance, and healthcare platforms, I understand how to build systems that handle real user traffic and business complexity.",
+        "Backend Engineer specializing in building scalable SaaS platforms and production-grade backend systems.",
+        "I design and develop high-performance APIs, multi-tenant architectures, and complex backend systems that support real-world business operations.",
+        "Experienced in translating business requirements into clean, maintainable, and scalable solutions, with a focus on performance, reliability, and system design.",
+        "Worked across transportation, education, finance, and subscription-based platforms serving real users in production environments.",
       ],
       stats: {
         experience: "Years Exp",
@@ -47,92 +48,66 @@ export const translations = {
         "A curated set of tools and frameworks I use daily to build reliable, high-performance applications",
       categories: {
         backend: {
-          title: "Backend Development",
+          title: "Core Backend",
           items: [
             "PHP",
             "Laravel",
-            "Laravel Nova",
             "Node.js",
             "Express.js",
             "RESTful APIs",
-            "MVC",
             "OOP",
-            "Queues & Jobs",
-          ],
-        },
-        frontend: {
-          title: "Frontend",
-          items: [
-            "Vue.js 3",
-            "Inertia.js",
-            "Blade Templates",
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "jQuery",
-            "Ajax",
+            "MVC",
+            "Clean Architecture",
+            "Queues",
+            "Events",
+            "Design Patterns",
           ],
         },
         database: {
-          title: "Databases",
+          title: "Databases & Performance",
           items: [
             "MySQL",
             "PostgreSQL",
-            "MariaDB",
-            "MongoDB",
-            "Eloquent ORM",
             "Redis",
+            "Eloquent ORM",
             "Query Optimization",
+            "Database Indexing",
           ],
         },
-        auth: {
-          title: "Auth & Security",
-          items: ["JWT", "Passport", "Sanctum", "Middleware", "Authorization"],
-        },
-        devops: {
-          title: "DevOps & Cloud",
+        architecture: {
+          title: "System Design & Architecture",
           items: [
-            "Docker",
-            "AWS",
-            "CI/CD Pipelines",
-            "Cron Jobs",
-            "Deployment Automation",
+            "SaaS Architecture",
+            "Multi-tenant Systems",
+            "Modular Architecture",
+            "Scalability",
+            "Distributed Systems Basics",
           ],
         },
         integrations: {
-          title: "Integrations",
+          title: "Integrations & Payments",
           items: [
-            "Stripe",
-            "PayTabs",
-            "Noon",
-            "Al Rajhi",
+            "Payment Gateway Integrations",
+            "Third-party APIs",
             "WhatsApp API",
-            "SMS",
-            "OneSignal",
-            "Google Maps",
+            "SMS Gateways",
+            "Google Maps Platform",
           ],
         },
-        testing: {
-          title: "Testing & Tools",
+        devops: {
+          title: "DevOps & Deployment",
           items: [
-            "PHPUnit",
-            "Postman",
-            "Git",
-            "GitHub",
-            "GitLab",
-            "Composer",
-            "Jira",
+            "Docker",
+            "AWS",
+            "CI/CD",
+            "Linux",
+            "Deployment Automation",
+            "Cron Jobs",
           ],
         },
-        other: {
-          title: "Other",
-          items: [
-            "RTL/LTR",
-            "WebSocket",
-            "QR Code",
-            "Clean Code",
-            "Modular Architecture",
-          ],
+        tools: {
+          title: "Tools & Workflow",
+          items: ["Git", "GitHub", "Postman", "Jira", "Composer"],
         },
       },
     },
@@ -146,44 +121,47 @@ export const translations = {
       companies: [
         {
           name: "Digital Servers Company",
-          role: "Backend Developer",
+          role: "Backend Developer (Laravel) (Remote, Full-time)",
           location: "Jeddah, Saudi Arabia",
           period: "Sep 2023 – Present",
           description:
-            "Building scalable SaaS platforms and production systems for diverse business needs",
+            "Backend development of scalable SaaS and production systems for transportation and enterprise platforms in Saudi Arabia.",
           highlights: [
-            "Rebuilt entire system architectures and developed comprehensive admin dashboards",
-            "Integrated payment gateways (PayTabs, Noon, Al Rajhi) with secure transaction processing",
-            "Built multi-provider notification systems with dynamic templates",
-            "Developed subscription systems, gamification engines, and CMS platforms",
-            "Delivered stable, high-performance platforms with strong scalability",
+            "Led backend development of a large-scale transportation SaaS platform handling trips, drivers, and payment workflows in production.",
+            "Designed and implemented multi-tenant SaaS architecture for scalable subscription-based systems.",
+            "Integrated multiple payment gateways (PayTabs, Noon, Al Rajhi) ensuring secure and reliable transactions.",
+            "Built a dynamic notification system supporting Email, SMS, WhatsApp, and Push notifications.",
+            "Developed admin dashboards and CMS systems for complex business operations and workflows.",
+            "Improved system performance and stability across production services through backend optimization and architecture refactoring.",
           ],
         },
         {
           name: "In-Code Hub",
-          role: "Backend Developer",
+          role: "Backend Developer (Hybrid, Full-time)",
           location: "Cairo, Egypt",
           period: "Feb 2023 – Aug 2023",
-          description: "Developed mobile backend APIs and AI-powered solutions",
+          description: "Backend API development for mobile applications and production systems including event management and booking platforms.",
           highlights: [
-            "Built backend features for event management and hotel booking platforms",
-            "Implemented subscription systems with GPS tracking integration",
-            "Created comprehensive API documentation for mobile applications",
-            "Developed secure payment integrations and booking confirmation systems",
+            "Built backend APIs for event management and hotel booking platforms with scalable architecture.",
+            "Implemented GPS-based tracking system to verify user presence during events.",
+            "Developed and documented RESTful APIs for mobile applications ensuring stable integration.",
+            "Integrated secure payment systems and handled full booking lifecycle workflows.",
+            "Improved API performance and reliability under high-traffic production usage.",
           ],
         },
         {
           name: "YallaWeb",
-          role: "Backend Developer",
+          role: "Backend Developer (Onsite, Full-time)",
           location: "Qena, Egypt",
           period: "Jan 2022 – Jan 2023",
           description:
-            "Built modular backend systems and enhanced platform stability",
+            "Backend development and system enhancement for multi-vendor marketplace and donation platforms.",
           highlights: [
-            "Developed backend and admin panels for multi-vendor marketplace",
-            "Rebuilt charity platform with custom payment modules",
-            "Enhanced platform architecture to support flexible module usage",
-            "Improved stability and scalability across multiple platforms",
+            "Developed backend systems for multi-vendor marketplace including product and vendor management modules.",
+            "Rebuilt donation platform backend using modular architecture for better scalability and maintainability.",
+            "Designed and integrated custom payment system for secure online transactions.",
+            "Enhanced CMS features including media handling, content workflows, and dynamic content management.",
+            "Resolved critical production issues and improved system stability and performance.",
           ],
         },
       ],
@@ -194,12 +172,18 @@ export const translations = {
       label: "Featured Work",
       title: "Production Projects",
       description: "Real platforms serving thousands of users",
+      problem: "Problem",
+      solution: "Solution",
+      outcome: "Outcome",
+      technologiesUsed: "Technologies Used",
+      viewCaseStudy: "Click to view case study →",
       items: [
         {
           title: "Masaraty Global",
           category: "Transportation Platform",
           description:
             "Complete transportation platform with trip management, driver coordination, and payment processing",
+          url: "https://app.masaraty.sa/",
           problem:
             "Need for a scalable ride-booking system with real-time tracking",
           solution:
@@ -220,6 +204,7 @@ export const translations = {
           category: "Educational Platform",
           description:
             "Multi-level education platform with gamification and exam management",
+          url: "https://new.mahaali.sa/",
           problem: "Complex educational structure across multiple grade levels",
           solution:
             "Rebuilt platform with structured curriculum management, Noon payment integration, and full gamification engine",
@@ -238,6 +223,7 @@ export const translations = {
           category: "SaaS Nutrition Platform",
           description:
             "Multi-tenant meal subscription and nutrition tracking system",
+          url: "https://cortra.net/",
           problem:
             "Need for flexible SaaS platform supporting multiple businesses",
           solution:
@@ -257,6 +243,7 @@ export const translations = {
           title: "Mezanyati",
           category: "Finance Management",
           description: "Personal finance tracking application",
+          url: "https://mezanyati.com/",
           problem: "Users need clear insights into financial behavior",
           solution:
             "Built comprehensive tracking system for income, expenses, debts, and lending",
@@ -269,6 +256,7 @@ export const translations = {
           category: "Healthcare Platform",
           description:
             "Medical offers and discounts platform for Saudi customers",
+          url: "https://app.takafulalarabia.com/",
           problem: "Validate membership through government systems",
           solution:
             "Integrated government API for membership validation with automated verification",
@@ -279,6 +267,7 @@ export const translations = {
           title: "Smart Schedule",
           category: "Automotive SaaS",
           description: "Car maintenance tracking and scheduling system",
+          url: "https://app.smartschedule.sa/",
           problem: "Car owners need automated maintenance reminders",
           solution:
             "Built subscription-based scheduler with Al Rajhi payments and web scraper for car data",
@@ -363,7 +352,9 @@ export const translations = {
         email: "Email",
         phone: "Phone",
         location: "Location",
-        locationValue: "Egypt (Remote)",
+        locationValue: "Egypt",
+        availability: "Availability",
+        availabilityValue: "Open to Remote & Relocation",
       },
     },
 
@@ -381,7 +372,7 @@ export const translations = {
       skills: "المهارات",
       experience: "الخبرة",
       projects: "المشاريع",
-      services: "الخدمات",
+      // services: "الخدمات",  // Commented out - Services section disabled
       contact: "تواصل",
     },
 
@@ -389,8 +380,8 @@ export const translations = {
     hero: {
       badge: "متاح للعمل عن بعد",
       title: "مطور Backend",
-      subtitle:
-        "متخصص في بناء منصات SaaS قابلة للتوسع وواجهات API وأنظمة خلفية عالية الأداء باستخدام Laravel و Node.js",
+      subtitle1: "مطور Backend متخصص في بناء منصات SaaS قابلة للتوسع، وأنظمة متعددة المستأجرين، وواجهات API جاهزة للإنتاج باستخدام Laravel.",
+      subtitle2: "أقوم بتصميم وبناء أنظمة تتعامل مع مستخدمين حقيقيين، وحركة استخدام فعلية، وعمليات أعمال حقيقية.",
       cta: {
         hire: "وظفني",
         projects: "شاهد المشاريع",
@@ -403,9 +394,10 @@ export const translations = {
       label: "نبذة عني",
       title: "بناء أنظمة خلفية قوية منذ 2022",
       description: [
-        "أنا مطور Backend متخصص في Laravel، مقيم في مصر وأعمل عن بُعد مع عملاء في السعودية وخارجها. أتخصص في بناء منصات SaaS جاهزة للإنتاج، أنظمة التجارة الإلكترونية، والتطبيقات متعددة المستأجرين القابلة للتوسع.",
-        "يركز عملي على تحويل المتطلبات المعقدة إلى كود نظيف وقابل للصيانة. من بناء واجهات RESTful APIs وتكامل بوابات الدفع إلى بناء لوحات التحكم وأنظمة الإشعارات، أقدم حلولاً تحل مشاكل حقيقية.",
-        "مع خبرة عبر منصات النقل والتعليم والتغذية والمالية والرعاية الصحية، أفهم كيفية بناء أنظمة تتعامل مع حركة المستخدمين الفعلية وتعقيد الأعمال.",
+        " مطور Backend متخصص في بناء أنظمة SaaS قابلة للتوسع وأنظمة خلفية جاهزة للإنتاج (Production-Grade Systems).",
+        "أقوم بتصميم وتطوير واجهات API عالية الأداء، وأنظمة متعددة المستأجرين (Multi-tenant Architectures)، وحلول خلفية معقدة تدعم عمليات أعمال حقيقية على نطاق واسع.",
+        "أمتلك خبرة في تحويل متطلبات الأعمال إلى حلول برمجية نظيفة وقابلة للصيانة والتوسع، مع التركيز على الأداء، الاعتمادية، وتصميم الأنظمة.",
+        "عملت على مشاريع في مجالات النقل، التعليم، المالية، وأنظمة الاشتراكات، تخدم مستخدمين حقيقيين في بيئات إنتاجية.",
       ],
       stats: {
         experience: "سنوات خبرة",
@@ -435,73 +427,66 @@ export const translations = {
             "Queues & Jobs",
           ],
         },
-        frontend: {
-          title: "الواجهة الأمامية",
+        backend: {
+          title: "الواجهة الخلفية الأساسية",
           items: [
-            "Vue.js 3",
-            "Inertia.js",
-            "Blade Templates",
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "jQuery",
-            "Ajax",
+            "PHP",
+            "Laravel",
+            "Node.js",
+            "Express.js",
+            "RESTful APIs",
+            "OOP",
+            "MVC",
+            "Clean Architecture",
+            "Queues",
+            "Events",
           ],
         },
         database: {
-          title: "قواعد البيانات",
+          title: "قواعد البيانات والأداء",
           items: [
             "MySQL",
             "PostgreSQL",
-            "MariaDB",
-            "MongoDB",
-            "Eloquent ORM",
             "Redis",
-            "تحسين الاستعلامات",
+            "Eloquent ORM",
+            "Query Optimization",
+            "Indexing",
           ],
         },
-        auth: {
-          title: "المصادقة والأمان",
-          items: ["JWT", "Passport", "Sanctum", "Middleware", "التفويض"],
-        },
-        devops: {
-          title: "DevOps والسحابة",
+        architecture: {
+          title: "تصميم النظام والهيكل",
           items: [
-            "Docker",
-            "AWS",
-            "CI/CD Pipelines",
-            "Cron Jobs",
-            "أتمتة النشر",
+            "SaaS Architecture",
+            "Multi-tenant Systems",
+            "Modular Design",
+            "Scalability",
+            "Distributed Systems Basics",
           ],
         },
         integrations: {
-          title: "التكاملات",
+          title: "التكاملات والمدفوعات",
           items: [
-            "Stripe",
-            "PayTabs",
-            "Noon",
-            "الراجحي",
+            "Payment Gateways (PayTabs, Noon, Al Rajhi)",
+            "Third-party APIs",
             "WhatsApp API",
             "SMS",
-            "OneSignal",
             "Google Maps",
           ],
         },
-        testing: {
-          title: "الاختبار والأدوات",
+        devops: {
+          title: "DevOps والنشر",
           items: [
-            "PHPUnit",
-            "Postman",
-            "Git",
-            "GitHub",
-            "GitLab",
-            "Composer",
-            "Jira",
+            "Docker",
+            "AWS",
+            "CI/CD",
+            "Linux Basics",
+            "Deployment Automation",
+            "Cron Jobs",
           ],
         },
-        other: {
-          title: "أخرى",
-          items: ["RTL/LTR", "WebSocket", "QR Code", "كود نظيف", "بنية نمطية"],
+        tools: {
+          title: "الأدوات وبيئة العمل",
+          items: ["Git", "GitHub", "Postman", "Jira", "Composer"],
         },
       },
     },
@@ -515,44 +500,48 @@ export const translations = {
       companies: [
         {
           name: "Digital Servers Company",
-          role: "مطور Backend",
+          role: "مطور Backend (Laravel) (عن بُعد، full-time)",
           location: "جدة، السعودية",
           period: "سبتمبر 2023 – الحالي",
           description:
-            "بناء منصات SaaS قابلة للتوسع وأنظمة إنتاجية لاحتياجات أعمال متنوعة",
+            "تطوير Backend لمنصات SaaS قابلة للتوسع وأنظمة إنتاجية للمشاريع في السعودية.",
           highlights: [
-            "إعادة بناء بنية أنظمة كاملة وتطوير لوحات تحكم شاملة",
-            "تكامل بوابات الدفع (PayTabs، Noon، الراجحي) مع معالجة معاملات آمنة",
-            "بناء أنظمة إشعارات متعددة المزودين مع قوالب ديناميكية",
-            "تطوير أنظمة اشتراكات، محركات تلعيب، ومنصات CMS",
-            "تقديم منصات مستقرة عالية الأداء مع قابلية توسع قوية",
+            "قادت تطوير الواجهة الخلفية لمنصة نقل SaaS كبيرة تتعامل مع الرحلات والسائقين وسير العمل الخاص بالمدفوعات في بيئة إنتاجية.",
+            "صممت ونفذت بنية SaaS متعددة المستأجرين لأنظمة اشتراكات قابلة للتوسع.",
+            "دمجت عدة بوابات دفع مثل PayTabs وNoon وAl Rajhi لضمان معاملات آمنة وموثوقة.",
+            "بنيت نظام إشعارات ديناميكي يدعم البريد الإلكتروني والرسائل القصيرة وواتساب والإشعارات.push.",
+            "طورت لوحات تحكم وأنظمة CMS لإدارة العمليات والمهام التشغيلية المعقدة.",
+            "حسنت من أداء النظام والاستقرار عبر الخدمات الإنتاجية من خلال تحسين البنية وال backend.",
           ],
         },
         {
           name: "In-Code Hub",
-          role: "مطور Backend",
+          role: "مطور Backend (Hybrid, full-time)",
           location: "القاهرة، مصر",
           period: "فبراير 2023 – أغسطس 2023",
           description:
-            "تطوير واجهات برمجية للموبايل وحلول مدعومة بالذكاء الاصطناعي",
+            "تطوير APIs خلفية لتطبيقات الجوال والنظامات الإنتاجية، بما في ذلك منصات إدارة الفعاليات والحجز.",
           highlights: [
-            "بناء ميزات خلفية لمنصات إدارة الفعاليات وحجز الفنادق",
-            "تنفيذ أنظمة اشتراكات مع تكامل تتبع GPS",
-            "إنشاء توثيق API شامل لتطبيقات الموبايل",
-            "تطوير تكاملات دفع آمنة وأنظمة تأكيد الحجوزات",
+            "بنيت APIs خلفية لمنصات إدارة الفعاليات وحجز الفنادق مع بنية قابلة للتوسع.",
+            "نفذت نظام تتبع قائم على GPS للتحقق من حضور المستخدم خلال الفعاليات.",
+            "طورت ووثقت واجهات RESTful للتطبيقات المحمولة لضمان تكامل مستقر.",
+            "دمجت أنظمة دفع آمنة ومعالجة دورة حياة الحجوزات بالكامل.",
+            "حسنت من أداء وموثوقية الـ APIs تحت ضغط استخدام إنتاجي مرتفع.",
           ],
         },
         {
           name: "YallaWeb",
-          role: "مطور Backend",
+          role: "مطور Backend (Onsite, full-time)",
           location: "قنا، مصر",
           period: "يناير 2022 – يناير 2023",
-          description: "بناء أنظمة خلفية نمطية وتحسين استقرار المنصات",
+          description:
+            "تطوير Backend وتحسين الأنظمة لمنصات السوق المتعدد البائعين والمنصات الخيرية.",
           highlights: [
-            "تطوير الخلفية ولوحات الإدارة لسوق متعدد البائعين",
-            "إعادة بناء منصة خيرية مع وحدات دفع مخصصة",
-            "تحسين بنية المنصة لدعم استخدام وحدات مرنة",
-            "تحسين الاستقرار وقابلية التوسع عبر منصات متعددة",
+            "طورت أنظمة خلفية لسوق متعدد البائعين يشمل إدارة المنتجات والبائعين.",
+            "أعاد بناء Backend لمنصة خيرية باستخدام بنية modular لتحسين القابلية للتوسع والصيانة.",
+            "صممت ودمجت نظام دفع مخصص للمعاملات الإلكترونية الآمنة.",
+            "حسنت من ميزات CMS بما فيها إدارة الوسائط وسير العمل للمحتوى.",
+            "حللت مشكلات إنتاجية حرجة وحسنت من استقرار وأداء الأنظمة.",
           ],
         },
       ],
@@ -563,12 +552,18 @@ export const translations = {
       label: "أعمال مميزة",
       title: "مشاريع إنتاجية",
       description: "منصات حقيقية تخدم آلاف المستخدمين",
+      problem: "التحدي",
+      solution: "الحل",
+      outcome: "النتيجة",
+      technologiesUsed: "التقنيات المستخدمة",
+      viewCaseStudy: "انقر لعرض دراسة الحالة ←",
       items: [
         {
           title: "Masaraty Global",
           category: "منصة نقل",
           description:
             "منصة نقل متكاملة مع إدارة الرحلات وتنسيق السائقين ومعالجة الدفع",
+          url: "https://app.masaraty.sa/",
           problem: "الحاجة لنظام حجز رحلات قابل للتوسع مع تتبع فوري",
           solution:
             "بناء لوحة تحكم شاملة مع تكامل Google Maps، بوابة PayTabs، ونظام إشعارات ديناميكي",
@@ -581,6 +576,7 @@ export const translations = {
           category: "منصة تعليمية",
           description:
             "منصة تعليمية متعددة المستويات مع تلعيب وإدارة الامتحانات",
+          url: "https://new.mahaali.sa/",
           problem: "بنية تعليمية معقدة عبر مستويات دراسية متعددة",
           solution:
             "إعادة بناء المنصة مع إدارة منهج منظمة، تكامل Noon، ومحرك تلعيب كامل",
@@ -597,6 +593,7 @@ export const translations = {
           title: "Cortra",
           category: "منصة SaaS للتغذية",
           description: "نظام اشتراكات وجبات وتتبع تغذية متعدد المستأجرين",
+          url: "https://cortra.net/",
           problem: "الحاجة لمنصة SaaS مرنة تدعم أعمال متعددة",
           solution:
             "بناء بنية متعددة المستأجرين مع اشتراكات وجبات، جدولة توصيل، ونظام دفع نمطي",
@@ -615,6 +612,7 @@ export const translations = {
           title: "Mezanyati",
           category: "إدارة مالية",
           description: "تطبيق تتبع مالي شخصي",
+          url: "https://mezanyati.com/",
           problem: "المستخدمون يحتاجون رؤى واضحة للسلوك المالي",
           solution: "بناء نظام تتبع شامل للدخل والمصروفات والديون والإقراض",
           outcome: "منصة بديهية تساعد المستخدمين على اتخاذ قرارات مالية أفضل",
@@ -624,6 +622,7 @@ export const translations = {
           title: "Takaful AlArabiya",
           category: "منصة صحية",
           description: "منصة عروض طبية وخصومات للعملاء السعوديين",
+          url: "https://app.takafulalarabia.com/",
           problem: "التحقق من العضوية عبر الأنظمة الحكومية",
           solution: "تكامل API حكومي للتحقق من العضوية مع تأكيد تلقائي",
           outcome: "منصة سلسة تربط المستخدمين بعروض الرعاية الصحية",
@@ -633,6 +632,7 @@ export const translations = {
           title: "Smart Schedule",
           category: "SaaS سيارات",
           description: "نظام تتبع وجدولة صيانة السيارات",
+          url: "https://app.smartschedule.sa/",
           problem: "أصحاب السيارات يحتاجون تذكيرات صيانة تلقائية",
           solution:
             "بناء جدولة قائمة على الاشتراك مع مدفوعات الراجحي وكاشط ويب لبيانات السيارات",
@@ -707,7 +707,9 @@ export const translations = {
         email: "البريد الإلكتروني",
         phone: "الهاتف",
         location: "الموقع",
-        locationValue: "مصر (عن بُعد)",
+        locationValue: "مصر",
+        availability: "التوفر",
+        availabilityValue: "متاح للعمل عن بُعد والانتقال",
       },
     },
 

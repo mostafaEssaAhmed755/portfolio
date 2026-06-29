@@ -39,12 +39,20 @@
             <span class="gradient-text">Mostafa Essa</span>
           </h1>
 
-          <!-- Subtitle -->
+          <!-- Subtitle1 -->
           <p
-            class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto animate-slide-up"
+            class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4 max-w-2xl mx-auto animate-slide-up"
             style="animation-delay: 0.2s"
           >
-            {{ t.hero.subtitle }}
+            {{ t.hero.subtitle1 }}
+          </p>
+
+          <!-- Subtitle2 -->
+          <p
+            class="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto animate-slide-up"
+            style="animation-delay: 0.35s"
+          >
+            {{ t.hero.subtitle2 }}
           </p>
 
           <!-- CTAs -->
@@ -377,34 +385,44 @@
           <div
             v-for="(project, idx) in t.projects.items"
             :key="idx"
-            class="card card-hover group cursor-pointer reveal"
+            class="card card-hover group reveal"
             :style="`transition-delay: ${idx * 0.1}s`"
-            @click="selectedProject = project"
           >
             <div class="flex items-start justify-between mb-4">
-              <div>
+              <div class="flex-1">
                 <h3
-                  class="text-xl font-display font-bold mb-1 group-hover:text-accent transition-colors"
+                  class="text-xl font-display font-bold mb-2 group-hover:text-accent transition-colors"
                 >
                   {{ project.title }}
                 </h3>
-                <span class="text-sm text-gray-500 dark:text-gray-400">{{
-                  project.category
-                }}</span>
+                <span
+                  class="inline-flex items-center rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent"
+                >
+                  {{ project.category }}
+                </span>
               </div>
-              <svg
-                class="w-6 h-6 text-accent group-hover:scale-110 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+              <a
+                :href="project.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex text-accent hover:text-accent/80 transition-colors"
+                :aria-label="`Open ${project.title} website`"
+                @click.stop
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
+                <svg
+                  class="w-6 h-6 group-hover:scale-110 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
             </div>
 
             <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
@@ -413,7 +431,7 @@
 
             <div class="flex flex-wrap gap-2">
               <span
-                v-for="(tech, techIdx) in project.tech.slice(0, 4)"
+                v-for="(tech, techIdx) in project.tech.slice(0, 3)"
                 :key="techIdx"
                 class="text-xs px-3 py-1 rounded-full bg-accent/10 text-accent"
               >
@@ -426,11 +444,21 @@
                 +{{ project.tech.length - 4 }}
               </span>
             </div>
+
+            <button
+              type="button"
+              class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent/80 transition-colors"
+              @click.stop="selectedProject = project"
+            >
+              {{ t.projects.viewCaseStudy }}
+            </button>
           </div>
         </div>
       </div>
     </section>
-    <!-- Services Section -->
+
+    <!-- 
+    Services Section - Commented out for future use
     <section id="services" class="py-20 md:py-32">
       <div class="container mx-auto px-4 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16 reveal">
@@ -484,6 +512,7 @@
         </div>
       </div>
     </section>
+    -->
 
     <!-- Contact Section -->
     <section
@@ -648,6 +677,34 @@
                 </div>
               </div>
 
+              <div class="card flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-accent"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">
+                    {{ t.contact.info.availability }}
+                  </div>
+                  <div class="font-semibold">
+                    {{ t.contact.info.availabilityValue }}
+                  </div>
+                </div>
+              </div>
+
               <!-- Download CV Card -->
               <a
                 href="./Mostafa-Essa-Resume.pdf"
@@ -734,24 +791,49 @@
                 selectedProject.category
               }}</span>
             </div>
-            <button
-              @click="selectedProject = null"
-              class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+            <div class="flex items-center gap-2">
+              <a
+                v-if="selectedProject.url"
+                :href="selectedProject.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-accent"
+                :aria-label="`Open ${selectedProject.title} website`"
+                @click.stop
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+              <button
+                @click="selectedProject = null"
+                class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
 
           <p class="text-gray-600 dark:text-gray-300 mb-6">
@@ -774,7 +856,7 @@
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
                   />
                 </svg>
-                Problem
+                {{ t.projects.problem }}
               </h4>
               <p class="text-gray-600 dark:text-gray-300">
                 {{ selectedProject.problem }}
@@ -796,7 +878,7 @@
                     d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
                   />
                 </svg>
-                Solution
+                {{ t.projects.solution }}
               </h4>
               <p class="text-gray-600 dark:text-gray-300">
                 {{ selectedProject.solution }}
@@ -818,7 +900,7 @@
                     d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                   />
                 </svg>
-                Outcome
+                {{ t.projects.outcome }}
               </h4>
               <p class="text-gray-600 dark:text-gray-300">
                 {{ selectedProject.outcome }}
@@ -827,7 +909,7 @@
           </div>
 
           <div>
-            <h4 class="font-semibold mb-3">Technologies Used</h4>
+            <h4 class="font-semibold mb-3">{{ t.projects.technologiesUsed }}</h4>
             <div class="flex flex-wrap gap-2">
               <span
                 v-for="(tech, idx) in selectedProject.tech"
@@ -881,20 +963,18 @@ const { t } = useLanguage();
 useScrollAnimation();
 
 const stats = {
-  experience: { value: 3 },
-  projects: { value: 10 },
+  experience: { value: 4 },
+  projects: { value: 50 },
   companies: { value: 3 },
 };
 
 const categoryIcons = {
   backend: "⚙️",
-  frontend: "🖼️",
   database: "🗄️",
-  auth: "🔐",
-  devops: "🚀",
+  architecture: "🏗️",
   integrations: "🔗",
-  testing: "🧪",
-  other: "🌐",
+  devops: "🚀",
+  tools: "🛠️",
 };
 
 const contactInfo = {
