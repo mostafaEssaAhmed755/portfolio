@@ -1,4 +1,4 @@
-# Mostafa Essa Ahmed - Portfolio
+# Mostafa Essa - Portfolio
 
 A premium, bilingual (English/Arabic), animated developer portfolio built with Vue 3, Vite, and Tailwind CSS.
 
@@ -123,7 +123,7 @@ Modify `src/views/Home.vue` to add or remove sections as needed.
 
 ## 📝 License
 
-© 2026 Mostafa Essa Ahmed. All rights reserved.
+© 2026 Mostafa Essa. All rights reserved.
 
 ## 🤝 Contact
 
