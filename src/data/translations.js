@@ -361,7 +361,7 @@ export const translations = {
     // Footer
     footer: {
       copyright: "© 2026 Mostafa Essa. All rights reserved.",
-      built: "Built with Vue 3 + Vite + Tailwind CSS",
+      built: "Building scalable backend systems with clean architecture.",
       social: "Connect with me",
     },
   },
@@ -715,8 +715,8 @@ export const translations = {
 
     // Footer
     footer: {
-      copyright: "© 2026 مصطفى عيسى أحمد. جميع الحقوق محفوظة.",
-      built: "مبني بـ Vue 3 + Vite + Tailwind CSS",
+      copyright: "© 2026 مصطفى عيسى . جميع الحقوق محفوظة.",
+      built: "بناء أنظمة خلفية قابلة للتوسع بهندسة نظيفة.",
       social: "تواصل معي",
     },
   },
