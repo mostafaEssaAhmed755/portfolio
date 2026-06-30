@@ -4,9 +4,9 @@
       <div class="grid md:grid-cols-3 gap-8 mb-8">
         <!-- Brand -->
         <div>
-          <router-link to="/" class="text-2xl font-bold font-display mb-4 block">
-            <span class="gradient-text">Mostafa</span>
-            <span class="text-white">.</span>
+          <router-link to="/" class="inline-flex items-center gap-2 mb-4">
+            <img src="/logo.svg" alt="Mostafa logo" class="h-10 w-auto" />
+            <span class="sr-only">Home</span>
           </router-link>
           <p class="text-gray-400 text-sm">{{ t.footer.built }}</p>
         </div>

@@ -360,7 +360,7 @@ export const translations = {
 
     // Footer
     footer: {
-      copyright: "© 2026 Mostafa Essa Ahmed. All rights reserved.",
+      copyright: "© 2026 Mostafa Essa. All rights reserved.",
       built: "Built with Vue 3 + Vite + Tailwind CSS",
       social: "Connect with me",
     },

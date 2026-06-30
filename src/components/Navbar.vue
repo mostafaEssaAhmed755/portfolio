@@ -3,9 +3,9 @@
     <div class="container mx-auto px-4 lg:px-8">
       <div class="flex items-center justify-between">
         <!-- Logo -->
-        <router-link to="/" class="text-2xl font-bold font-display">
-          <span class="gradient-text">Mostafa</span>
-          <span class="text-gray-900 dark:text-white">.</span>
+        <router-link to="/" class="flex items-center gap-2">
+          <img src="/logo.svg" alt="Mostafa logo" class="h-10 w-auto" />
+          <span class="sr-only">Home</span>
         </router-link>
 
         <!-- Desktop Menu -->
